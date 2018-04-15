@@ -14,6 +14,7 @@ class AppProvider extends PureComponent {
     }
   }
 
+  // Sets the initial vmList state for the whole app
   setVMList(vendingMachineList) {
     this.setState({
       ...this.state,
@@ -21,6 +22,7 @@ class AppProvider extends PureComponent {
     })
   }
 
+  // Updates the state after adding a new Vending Machine to the list
   addVendingMachine(vendingMachine) {
     this.setState({
       ...this.state,
@@ -31,6 +33,7 @@ class AppProvider extends PureComponent {
     })
   }
 
+  // Updates the state after removing an existing Vending Machine from the list
   deleteVendingMachine(vendingMachineId) {
     const vendingMachineList = this.state.vendingMachineList.filter(({ id }) => vendingMachineId !== id)
     this.setState({
@@ -39,6 +42,8 @@ class AppProvider extends PureComponent {
     })
   }
 
+  // Renders the app (Dashboard) as any component under the app is a children
+  // setting the state dynamically
   render() {
     return (
       <Context.Provider value={ this.state }>

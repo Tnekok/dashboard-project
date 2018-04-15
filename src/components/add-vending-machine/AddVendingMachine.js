@@ -2,6 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './AddVendingMachine.css'
 
+/*
+ * Stateless Component, no logic attached
+ * Params:
+ *    latitude,
+ *    longitude,
+ *    onChange,
+ *    add
+*/ 
 const AddVendingMachine = ({ latitude, longitude, onChange, add }) => (
   <div className="add-vending-machine">
     <p className="title">Add a new Vending Machine</p>
