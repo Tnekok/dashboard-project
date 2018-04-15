@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
+import { AddVendingMachineContainer } from '../add-vending-machine'
 
 const Dashboard = () => (
   <Fragment>
-    Esto es el Dashboard
+    <AddVendingMachineContainer />
   </Fragment>
 )
 
