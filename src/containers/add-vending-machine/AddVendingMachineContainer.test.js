@@ -8,7 +8,7 @@ describe('<AddVendingMachineContainer />', () => {
   let addVendingMachineContainerInstace
 
   beforeEach(() => {
-    requestHelper.asyncRequests = jest.fn()
+    requestHelper.asyncRequest = jest.fn()
     addVendingMachineContainer = shallow(<AddVendingMachineContainer />)
     addVendingMachineContainerInstace = addVendingMachineContainer.instance()
   })
