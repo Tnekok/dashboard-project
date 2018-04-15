@@ -1,15 +1,20 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import './AddVendingMachine.css'
 
 const AddVendingMachine = ({ latitude, longitude, onChange, add }) => (
-  <Fragment>
-    <label htmlFor="latitude">Latitude</label>
-    <input name="latitude" type="text" value={ latitude } onChange={ onChange } />
-    <label htmlFor="longitude">Longitude</label>
-    <input name="longitude" type="text" value={ longitude } onChange={ onChange } />
-
-    <button type="button" onClick={ add } >Add new Vending Machine</button>
-  </Fragment>
+  <div className="add-vending-machine">
+    <p className="title">Add a new Vending Machine</p>
+    <div className="latitude label-input">
+      <label htmlFor="latitude">Latitude</label>
+      <input name="latitude" type="text" value={ latitude } onChange={ onChange } />
+    </div>
+    <div className="longitude label-input">
+      <label htmlFor="longitude">Longitude</label>
+      <input name="longitude" type="text" value={ longitude } onChange={ onChange } />
+    </div>
+    <button type="button" onClick={ add } >Add</button>
+  </div>
 )
 
 AddVendingMachine.propTypes = {

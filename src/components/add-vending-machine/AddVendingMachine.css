@@ -1,0 +1,41 @@
+.add-vending-machine {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  width: 220px;
+  height: 130px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.add-vending-machine .title {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.add-vending-machine button {
+  margin-top: 10px;
+  position: relative;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid green;
+  color: white;
+  background-color: green;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.add-vending-machine button:hover {
+  cursor: pointer;
+}
+
+.label-input {
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.label-input label {
+  padding-right: 5px;
+}
+
+.label-input input {
+  float: right;
+}

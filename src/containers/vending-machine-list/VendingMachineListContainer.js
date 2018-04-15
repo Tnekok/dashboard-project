@@ -54,6 +54,7 @@ class VendingMachineListContainer extends PureComponent {
   render() {
     return (
       <div className="vending-machine-list">
+        <h2>Vending Machine List</h2>
         { this.renderVendingMachineList() }
       </div>
     )

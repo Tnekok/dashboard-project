@@ -25,8 +25,9 @@ class AddVendingMachineContainer extends PureComponent {
       const requestParams = { method: httpMethods.post, body: { vending_machine: this.state.vendingMachine } }
       const { data: vendingMachine } = await asyncRequest(requestParams)
       this.props.addVendingMachine(vendingMachine)
+      // TODO: reset the value of the inputs after adding a new vending_machine
     } catch (error) {
-      // TODO:
+      // TODO: handle the API error on call response
     } 
   }
 
