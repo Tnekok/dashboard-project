@@ -14,8 +14,7 @@ export const httpErrors = {
 
 }
 
-export const asyncRequest = async ({ id, method = httpMethods.get, body }) => {
-  debugger
+export const asyncRequest = async ({ id = '', method = httpMethods.get, body } = {}) => {
   const options = {
     method,
     body: JSON.stringify(body),
@@ -23,7 +22,6 @@ export const asyncRequest = async ({ id, method = httpMethods.get, body }) => {
       'Content-Type': 'application/json',
     },
   }
-  const url = id ? BASE_URL + id : BASE_URL
-  const response = await ( await(fetch(url, options)) ).json()
+  const response = await ( await(fetch(BASE_URL + id, options)) ).json()
   return response
 }
