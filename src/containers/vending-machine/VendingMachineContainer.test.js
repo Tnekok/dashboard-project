@@ -12,6 +12,7 @@ describe('<VendingMachineContainer />', () => {
     },
     id: 'da632a6a-51c1-4e7d-84af-9059207a7b22',
     type: 'vending_machine',
+    deleteVendingMachine: jest.fn()
   }
 
   let vendingMachineContainer

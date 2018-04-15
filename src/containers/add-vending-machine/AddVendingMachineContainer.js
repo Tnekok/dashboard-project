@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 import { asyncRequest, httpMethods } from '../../helpers/async-request'
 
@@ -22,7 +23,8 @@ class AddVendingMachineContainer extends PureComponent {
   async add() {
     try {
       const requestParams = { method: httpMethods.post, body: { vending_machine: this.state.vendingMachine } }
-      await asyncRequest(requestParams)
+      const { data: vendingMachine } = await asyncRequest(requestParams)
+      this.props.addVendingMachine(vendingMachine)
     } catch (error) {
       // TODO:
     } 
@@ -42,7 +44,10 @@ class AddVendingMachineContainer extends PureComponent {
     const { latitude, longitude } = this.state.vendingMachine
     return <AddVendingMachine latitude={ latitude } longitude={ longitude } onChange={ this.onChange } add={ this.add } />
   }
+}
 
+AddVendingMachineContainer.propTypes = {
+  addVendingMachine: PropTypes.func.isRequired,
 }
 
 export default AddVendingMachineContainer

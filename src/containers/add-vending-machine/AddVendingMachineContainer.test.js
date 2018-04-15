@@ -4,12 +4,15 @@ import AddVendingMachineContainer from './AddVendingMachineContainer'
 import * as requestHelper from '../../helpers/async-request'
 
 describe('<AddVendingMachineContainer />', () => {
+  const props = {
+    addVendingMachine: jest.fn()
+  }
   let addVendingMachineContainer
   let addVendingMachineContainerInstace
 
   beforeEach(() => {
     requestHelper.asyncRequest = jest.fn()
-    addVendingMachineContainer = shallow(<AddVendingMachineContainer />)
+    addVendingMachineContainer = shallow(<AddVendingMachineContainer { ...props } />)
     addVendingMachineContainerInstace = addVendingMachineContainer.instance()
   })
 

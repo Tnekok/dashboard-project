@@ -17,6 +17,7 @@ class VendingMachineContainer extends PureComponent {
     try {
       const requestParams = { id: this.props.id, method: httpMethods.delete }
       await asyncRequest(requestParams)
+      this.props.deleteVendingMachine(this.props.id)
     } catch (error) {
       // TODO:
     } 
@@ -34,6 +35,7 @@ VendingMachine.propTypes = {
   }).isRequired,
   id: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  deleteVendingMachine: PropTypes.func.isRequired,
 }
 
 export default VendingMachineContainer
