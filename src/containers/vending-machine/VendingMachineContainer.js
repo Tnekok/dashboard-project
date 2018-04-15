@@ -19,7 +19,7 @@ class VendingMachineContainer extends PureComponent {
       await asyncRequest(requestParams)
       this.props.deleteVendingMachine(this.props.id)
     } catch (error) {
-      // TODO:
+      // TODO: handle the API error on call response
     } 
   }
 

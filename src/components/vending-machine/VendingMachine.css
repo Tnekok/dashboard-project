@@ -1,0 +1,40 @@
+.vending-machine-list {
+  position: relative;
+  padding: 40px;
+}
+
+.vending-machine-list h2 {
+  margin-top: 0;
+}
+
+.vending-machine {
+  float: left;
+  position: relative;
+  margin: 10px 10px auto;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.vending-machine .title {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.vending-machine .title .title-info {
+  font-weight: normal;
+}
+
+.vending-machine button {
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid red;
+  color: white;
+  background-color: red;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.vending-machine button:hover {
+  cursor: pointer;
+}

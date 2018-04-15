@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import './VendingMachine.css'
 
 const VendingMachine = ({ attributes, id, type, deleteVM }) => (
   <Fragment>
-    <p>
-      <span>Id: { id }</span>
+    <div className="vending-machine">
+      <p className="title">Vending Machine Id: <br /><span className="title-info">{ id }</span></p>
       <button onClick={ deleteVM }>Remove</button>
-    </p>
+    </div>
   </Fragment>
 )
 
