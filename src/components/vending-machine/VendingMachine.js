@@ -2,6 +2,14 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import './VendingMachine.css'
 
+/*
+ * Stateless Component, no logic attached
+ * Params:
+ *    attributes: { longitude, latitude },
+ *    id,
+ *    type,
+ *    deleteVM
+*/
 const VendingMachine = ({ attributes, id, type, deleteVM }) => (
   <Fragment>
     <div className="vending-machine">

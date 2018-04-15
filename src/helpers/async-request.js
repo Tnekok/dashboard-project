@@ -1,4 +1,6 @@
-
+/*
+ * API call manager
+*/
 const BASE_URL = 'http://frontend-test-api.herokuapp.com/api/v1/users/c7bc96c6-6fb5-49a1-be7f-b21a1d71c8ac/vending_machines/'
 
 export const httpMethods = {
